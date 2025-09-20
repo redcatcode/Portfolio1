@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "Inter";
+    src: url(font/MozillaHeadline-VariableFont_wdth\,wght.woff2) format(woff2);
+    font-style: normal;
+    font-weight: 400;
+}
+body {
+    --blue-color: #EAFAFF;
+    --white-color: #FFFFFF;
+    --red-color: #DD2525;
+    --black-color: #222222;
+    background-color: var(--blue-color);
+    display: flex;
+    column-gap: 2vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.block {
+    width: 285px;
+    height: 350px;
+    background-color: var(--white-color);
+    margin-top: 10vh;
+}
+
+.img{
+    margin-left: 20px;
+}
+
+@keyframes up-and-turn{
+    50% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: rotate(50deg);
+    }
+}
+
+.img:hover {
+    animation: up-and-turn 1s forwards;
+}
+
+.prise {
+    margin-left: 120px;
+    color: var(--red-color);
+}
+
+.title {
+    margin-left: 100px;
+    font-family: "Inter";
+}
+
+.block:not(:hover) .add-to-card-btn{
+    display: none;
+}
+
+.add-to-card-btn {
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    transition: all 0.5s ease;
+}
+
+.add-to-card-btn:hover {
+    height: 40px;
+    color: var(--black-color);
+    background-color: var(--white-color);
+}
